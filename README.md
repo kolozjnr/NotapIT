@@ -1,3 +1,4 @@
+Notap IT Unit Troubleshooter is design to aid the staff of NOTAP easy access to IT unit, on a request from a staff the app will randomly notify a staff by sending him/her the office name and the person whose pc or printer requires troubleshooting. <p>A Troubleshoot Tips will another feature of the app this section gives you some tips just for you to <strong>Fix It Yourself </strong> before sending the IT units a message  </p>
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
