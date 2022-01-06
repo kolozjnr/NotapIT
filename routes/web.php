@@ -20,7 +20,11 @@ use App\Http\Controllers\UnivController;
 });*/
 
 Route::get('/', [UnivController::class, ('index')])->name('Home');
+Route::get('printer', [UnivController::class, ('printer')])->name('printer');
+Route::get('pc', [UnivController::class, ('pc')])->name('pc');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+Route::get('/add', [UnivController::class,('addProb')])->name('AddProblem');

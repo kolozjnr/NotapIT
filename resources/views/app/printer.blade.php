@@ -5,15 +5,16 @@
     <!-- ===============================================-->
     <main class="main" id="top">
       <section class="py-0" id="header">
-        <div class="bg-holder" style="background-image:url(assets/img/gallery/background.png);background-position:right top;background-size:contain;">
+        <div class="bg-holder">
         </div>
         <!--/.bg-holder-->
-
+        
         <div class="container">
           <div class="row align-items-center min-vh-75 min-vh-xl-100">
+          <h1 class="display-5 text-center lh-sm text-uppercase text-light">PRINTER TIPS</h1>
             <div class="col-md-8 col-lg-6 text-md-start text-center">
-              <h1 class="display-1 lh-sm text-uppercase text-light">NOTAP PRINTER AND PC <br class="d-none d-xxl-block" /> TROUBLESHOOT</h1>
-              <div class="pt-4"><a class="btn btn-sm btn-outline-primary me-3" href="#">PC TIPS</a><a class="btn btn-sm btn-outline-primary" href="#">PRINTER TIPS</a></div>
+              
+              <div class="pt-4"><a class="btn btn-sm btn-outline-primary me-3" href="{{route('pc')}}">PC TIPS</a></div>
             </div>
           </div>
         </div>
@@ -34,7 +35,7 @@
                     <div class="row h-100">
                       <div class="col-12">
                         <h5 class="fs-3 fs-lg-5 lh-sm text-uppercase pt-5">Tip of the Week</h5>
-                        <p class="my-4 pe-xl-5" style="color:#fffff9">You shouldn’t put a laptop close to appliances that generate a strong magnetic field, such as televisions, large speakers and even some high-tech refrigerators. You should even avoid putting your cellphone on top of your laptop while both are on.</p>
+                        <p class="my-4 pe-xl-5">You shouldn’t put a laptop close to appliances that generate a strong magnetic field, such as televisions, large speakers and even some high-tech refrigerators. You should even avoid putting your cellphone on top of your laptop while both are on.</p>
                       </div>
                     </div>
                   </div>
