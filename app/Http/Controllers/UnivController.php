@@ -6,6 +6,14 @@ use Illuminate\Http\Request;
 
 use App\Models\FaultCatr;
 
+use Illuminate\Support\Facades\Auth;
+
+use Illuminate\Support\Facades\DB;
+
+use App\Models\User;
+
+use App\Models\RequestLog;
+
 class UnivController extends Controller
 {
     //Universal Functions
@@ -24,6 +32,111 @@ class UnivController extends Controller
 
     public function addProb(){
         return view('main.add-problem');
+    }
+
+    //Request Help Logic
+    public function requestHelp(Request $req){
+        $users = DB::table('users')
+        ->where([
+            ["status", "=", "Active"],
+            ["dept", "=", "IT"],
+        ])->get();
+        if($users->isEmpty()){
+            $admin = DB::table('users')
+            ->where([
+                ["status", "=", "admin"],
+            ])->get();
+            foreach($admin as $adm){
+                //dd($adm->name);
+                $client = new \GuzzleHttp\Client();
+                $dept = Auth::user()->dept;
+                $email = $adm->email;
+                $name = $adm->name;
+                $IT_attndnt_tel = $adm->tel;
+                $response = $client->post(
+                    'http://bulksmsnigeria.com/api/v1/sms/create',
+                    [
+                        'headers' => [
+                            'Accept' => 'application/json',
+                        ],
+                        'query' => [
+                            'api_token'=> '2BVWH5wjn3c9ABqSIvRB7gCQen2GjHrhvIXpySn2K6XxbN2NpMdk2f8Y9XVa',
+                            'to'=> $IT_attndnt_tel,
+                            'from'=> 'NOTAP IT',
+                            'body'=> 'Please' ." " . $name . 'kindly check'." " .$dept. 'for a Troubleshoot',
+                            'gateway'=> '0',
+                            'append_sender'=> '0',
+                        ],
+                    ]
+                );
+                $body = $response->getBody();
+                print_r(json_decode((string) $body));
+    
+                $update = User::find($id);
+    
+                $updatepost = new PostRequest;
+                DB::table('request_logs')->where([
+                    ['dept', '=', $request->dept]
+                ])->Orderby('id', 'DESC')->limit(1)
+                ->update(
+                    ['tel' => $IT_attndnt_tel],
+                );
+    
+            return redirect('/dashboard')->with('success','IT Unit have successfully Recieved your request someone will attend to you in a moment. Thanks');
+            }
+            
+        
+        }
+        else{
+            $reqHelp = new RequestLog;
+
+            $dept = Auth::user()->dept;
+            $fault = $req->fault;
+
+            $reqHelp->save();
+        }
+        foreach($users as $user){
+            //SEND SMS NOTIFICATION TO IT Department
+            dd($users);
+
+            $client = new \GuzzleHttp\Client();
+            $email = $user->email;
+            $name = $user->name;
+            $IT_attndnt_tel = $user->tel;
+            $response = $client->post(
+                'http://bulksmsnigeria.com/api/v1/sms/create',
+                [
+                    'headers' => [
+                        'Accept' => 'application/json',
+                    ],
+                    'query' => [
+                        'api_token'=> '2BVWH5wjn3c9ABqSIvRB7gCQen2GjHrhvIXpySn2K6XxbN2NpMdk2f8Y9XVa',
+                        'to'=> $IT_attndnt_tel,
+                        'from'=> 'NOTAP IT',
+                        'body'=> 'Please' ." " . $name . 'kindly check'." " .$dept. 'for a Troubleshoot',
+                        'gateway'=> '0',
+                        'append_sender'=> '0',
+                    ],
+                ]
+            );
+            $body = $response->getBody();
+            print_r(json_decode((string) $body));
+
+            $update = User::find($id);
+            $update->status = "Busy";
+
+            $updatepost = new PostRequest;
+            DB::table('request_logs')->where([
+                ['dept', '=', $request->dept]
+            ])->Orderby('id', 'DESC')->limit(1)
+            ->update(
+                ['tel' => $IT_attndnt_tel],
+            );
+
+        return redirect('/dashboard')->with('success','IT Unit have successfully Recieved your request someone will attend to you in a moment. Thanks');
+        
+
+        }
     }
 
 }

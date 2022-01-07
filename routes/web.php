@@ -28,3 +28,4 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 })->name('dashboard');
 
 Route::get('/add', [UnivController::class,('addProb')])->name('AddProblem');
+Route::post('/dashboard',[UnivController::class,('requestHelp')])->name('reqHelp');

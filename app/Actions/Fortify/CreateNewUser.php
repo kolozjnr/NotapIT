@@ -20,8 +20,7 @@ class CreateNewUser implements CreatesNewUsers
      */
     public function create(array $input)
     {
-        $items = DB::table('fault_catrs')
-        ->get();
+        
         //return view('auth.register', ['items' => $items]);
 
         Validator::make($input, [
@@ -35,6 +34,9 @@ class CreateNewUser implements CreatesNewUsers
         return User::create([
             'name' => $input['name'],
             'email' => $input['email'],
+            'dept' => $input['dept'],
+            'tel' => $input['tel'],
+            'status' => $input['status'],
             'password' => Hash::make($input['password']),
         ]);
     }

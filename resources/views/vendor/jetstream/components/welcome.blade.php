@@ -8,7 +8,8 @@
     </div>
 
     <div class="mt-6 text-dark-500">
-        <form class="row g-3">
+        <form method="POST" action="{{route('reqHelp')}}" class="row g-3">
+            @csrf
             <div class="col-md-6">
                 <label for="inputState" class="form-label" style="color:#000; font-weight:900"><strong>Select a Fault</strong></label>
                 <select id="inputState" class="form-select">

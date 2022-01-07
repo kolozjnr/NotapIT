@@ -25,6 +25,8 @@
 
         <div class="min-h-screen bg-gray-100">
             @livewire('navigation-menu')
+            
+            @include('message.flash-message')
 
             <!-- Page Heading -->
             @if (isset($header))

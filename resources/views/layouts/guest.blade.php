@@ -51,6 +51,51 @@
             </div>
         </nav>
             {{ $slot }}
+
+            <section class="bg-black py-8 pt-0" id="store">
+                <div class="bg-holder" style="background-image:url(assets/img/gallery/side.png);background-position:left bottom;background-size:contain;">
+                </div>
+                <!--/.bg-holder-->
+
+                <div class="container-lg">
+                <div class="row flex-center">
+                    <div class="col-6 order-md-0 text-center text-md-start"></div>
+                    <div class="col-sm-10 col-md-6 col-lg-6 text-center text-md-start">
+                    <!---div class="col-4 position-relative ms-auto py-5"><a class="carousel-control-prev carousel-icon z-index-2" href="#carouselExampleFade" role="button" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></a><a class="carousel-control-next carousel-icon z-index-2" href="#carouselExampleFade" role="button" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></a></div---->
+                    <div class="carousel slide carousel-fade" id="carouselExampleFade" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row h-100">
+                            <div class="col-12">
+                                <h5 class="fs-3 fs-lg-5 lh-sm text-uppercase pt-5">Tip of the Week</h5>
+                                <p class="my-4 pe-xl-5" style="color:#fffff9">You shouldn’t put a laptop close to appliances that generate a strong magnetic field, such as televisions, large speakers and even some high-tech refrigerators. You should even avoid putting your cellphone on top of your laptop while both are on.</p>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </section>
+
+            <section class="py-0 pt-7" id="contact">
+                <div class="container">
+                    <div class="border-bottom border-700"></div>
+                        <div class="row flex-center my-3">
+                            <div class="col-md-12 order-1 order-md-0">
+                            <p class="my-2 text-800 text-center"> &COPY;
+                                Designed by ;<a class="text-500" href="https://artisankonect.com/" target="_blank">DevTeams </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- end of .container-->
+
+            </section>
+            <!-- <section> close ============================-->
+            <!-- ===========================================-->
+            </main>
         </div>
         
 

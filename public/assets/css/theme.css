@@ -36,7 +36,7 @@
   --bs-danger: #FF705C;
   --bs-light: #F9FAFD;
   --bs-dark: #212121;
-  --bs-font-sans-serif: "Roboto Condensed", "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --bs-font-sans-serif: "Roboto", "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --bs-font-monospace: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 254, 254, 0.15), rgba(255, 254, 254, 0));
 }
@@ -56,7 +56,7 @@
 
 body {
   margin: 0;
-  font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -3496,8 +3496,8 @@ fieldset:disabled .btn {
 
 .btn-primary {
   color: #FFFEFE;
-  background-color: #B98F7D;
-  border-color: #B98F7D;
+  background-color: #009500;
+  border-color: #009500;
 }
 
 .btn-primary:hover {
@@ -3823,14 +3823,14 @@ fieldset:disabled .btn {
 }
 
 .btn-outline-primary {
-  color: #B98F7D;
-  border-color: #B98F7D;
+  color: #009500;
+  border-color: #009500;
 }
 
 .btn-outline-primary:hover {
   color: #FFFEFE;
-  background-color: #B98F7D;
-  border-color: #B98F7D;
+  background-color: #009500;
+  border-color: #009500;
 }
 
 .btn-check:focus + .btn-outline-primary, .btn-outline-primary:focus {
