@@ -592,7 +592,10 @@ class ComposerStaticInit07626486a4f48a46f5c683e267495fab
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
         'App\\Models\\FaultCatr' => __DIR__ . '/../..' . '/app/Models/FaultCatr.php',
+<<<<<<< Updated upstream
         'App\\Models\\RequestLog' => __DIR__ . '/../..' . '/app/Models/RequestLog.php',
+=======
+>>>>>>> Stashed changes
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',

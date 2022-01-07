@@ -38,8 +38,8 @@
             <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     
-                <li class="nav-item px-2"><a href="{{ route('login') }}" class="nav-link fw-bold">LOGIN</a></li>
-                <li class="nav-item px-2"><a href="{{ route('register') }}" class="nav-link fw-bold">REGISTER</a></li>
+                <li class="nav-item px-2"><a href="" class="nav-link fw-bold">LOGIN</a></li>
+                <li class="nav-item px-2"><a href="" class="nav-link fw-bold">REGISTER</a></li>
                 </ul>
                 <form class="d-flex"><a class="text-primary" href="#!">
                     <svg class="feather feather-phone-call" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
