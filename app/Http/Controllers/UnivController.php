@@ -72,14 +72,15 @@ class UnivController extends Controller
                 $body = $response->getBody();
                 print_r(json_decode((string) $body));
     
+                $id = $adm->id;
                 $update = User::find($id);
     
-                $updatepost = new PostRequest;
+                $updatepost = new RequestLog;
                 DB::table('request_logs')->where([
-                    ['dept', '=', $request->dept]
+                    ['dept', '=', $req->dept]
                 ])->Orderby('id', 'DESC')->limit(1)
                 ->update(
-                    ['tel' => $IT_attndnt_tel],
+                    ['IT_attdnt_tel' => $IT_attndnt_tel],
                 );
     
             return redirect('/dashboard')->with('success','IT Unit have successfully Recieved your request someone will attend to you in a moment. Thanks');
@@ -121,16 +122,16 @@ class UnivController extends Controller
             );
             $body = $response->getBody();
             print_r(json_decode((string) $body));
-
+            $id = $user->id;
             $update = User::find($id);
             $update->status = "Busy";
 
             $updatepost = new PostRequest;
             DB::table('request_logs')->where([
-                ['dept', '=', $request->dept]
+                ['dept', '=', $req->dept]
             ])->Orderby('id', 'DESC')->limit(1)
             ->update(
-                ['tel' => $IT_attndnt_tel],
+                ['IT_attdnt_tel' => $IT_attndnt_tel],
             );
 
         return redirect('/dashboard')->with('success','IT Unit have successfully Recieved your request someone will attend to you in a moment. Thanks');
