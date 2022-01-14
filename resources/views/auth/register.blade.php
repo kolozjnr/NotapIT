@@ -8,7 +8,7 @@
 
         <form method="POST" action="{{ route('register') }}">
             @csrf
-
+            <input id="name" class="block mt-1 w-full" type="hidden" name="status" :value="INACTIVE" required autofocus autocomplete="name" />
             <div>
                 <x-jet-label for="name" value="{{ __('Name') }}" />
                 <x-jet-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />

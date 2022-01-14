@@ -18549,6 +18549,20 @@ Calaendar icon input[type="date"]::-webkit-calendar-picker-indicator {
 /*-----------------------------------------------
 |   User Styles
 -----------------------------------------------*/
+.accordion{
+  text-align: center;
+}
+.accordion-button{
+  text-align: center;
+  color: #FFFEFE;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.accordion-body{
+  color: #FFFFFF !important;
+  font-size: 1.5rem;
+  font-style: normal;
+}
 
 
 /*# sourceMappingURL=theme.css.map */
