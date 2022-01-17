@@ -18,6 +18,11 @@ class UnivController extends Controller
 {
     //Universal Functions
 
+    public function fault(){
+        $faults = DB::table('fault_catrs')->get();
+        return view('dashboard',['faults' => $faults]);
+    }
+
     public function index(){
         return view('app.index');
     }

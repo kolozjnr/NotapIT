@@ -1,7 +1,7 @@
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
-            <x-jet-authentication-card-logo />
+        <strong class="reqForm" style="color:#FFFFFF">Registration Form</strong>
         </x-slot>
 
         <x-jet-validation-errors class="mb-4" />
@@ -27,9 +27,19 @@
             <div class="mt-4">
                 <x-jet-label for="dept" value="{{ __('Department/Unit') }}" />
                 <select id="dept" class="block mt-1 w-full form-control" type="dept" name="dept" :value="old('dept')" required>
-                    <option value="" selected disabled>Department Unit</option>
-                    <option value="IT">IT</option>
-                    <option value="TIC">TIC</option>
+                    <option value="" selected disabled>Department/Unit</option>
+                    <option value="IT" class="select">IT</option>
+                    <option value="TIC" class="select">TIC</option>
+                    <option value="TARC" class="select">TARC</option>
+                    <option value="TTR" class="select">TTR</option>
+                    <option value="CS" class="select">CS</option>
+                    <option value="HRFM" class="select">HRFM</option>
+                    <option value="CP" class="select">CP</option>
+                    <option value="DG" class="select">DG</option>
+                    <option value="PROC" class="select">PROC</option>
+                    <option value="LEGAL" class="select">LEGAL</option>
+                    <option value="PR" class="select">PR</option>
+                    <option value="SERVICOM" class="select">SERVICOM</option>
             </select>
             </div>
 

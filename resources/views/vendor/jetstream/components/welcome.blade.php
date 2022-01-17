@@ -1,9 +1,9 @@
 <div class="p-6 sm:px-20 bg-white border-b border-gray-200">
     <div>
-        <x-jet-application-logo class="block h-12 w-auto" />
+        <img src="{{asset('assets/img/gallery/notap.png')}}" class="block h-12 w-auto" />
     </div>
 
-    <div class="mt-8 text-2xl" style="color:#000; font-weight:900">
+    <div class="mt-8 text-2xl" style="color:#000; font-weight:">
         Feel free to request an <strong>IT</strong> person to fix your Printer or PC!
     </div>
 
@@ -13,8 +13,10 @@
             <div class="col-md-6">
                 <label for="inputState" class="form-label" style="color:#000; font-weight:900"><strong>Select a Fault</strong></label>
                 <select id="inputState" class="form-select">
-                <option selected disabled style="color:#000; font-weight:900">Select Fault like</option>
-                <option style="color:#000; font-weight:900">Network Related Issues</option>
+                <option selected disabled class="select">Select Fault like</option>
+                <option class="select" value="Network Issues">Network Related Issues</option>
+                <option class="select" value="Printer Issues">Printer Related Issues</option>
+                <option class="select" value="Other">Other</option>
                 </select>
             </div>
             <div class="col-12">

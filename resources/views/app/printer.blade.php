@@ -14,7 +14,7 @@
           <h1 class="display-5 text-center lh-sm text-uppercase mt-8 mb-5 text-light">PRINTER TIPS</h1>
             <div class="col-md-10 col-lg-10 text-md-start text-center">
             <div class="accordion accordion-flush" id="accordionFlushExample">
-              <h3>Troubleshooting offline printer problems</h3>
+              <h3><marquee behavior="" direction="left">Troubleshooting offline printer problems</marquee></h3>
                 <div class="accordion-item">
                   <h2 class="accordion-header" id="flush-headingOne">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
@@ -83,8 +83,8 @@
                   </div>
                 </div>
               </div>
-              <div class="pt-4"><a class="btn btn-sm btn-outline-primary me-3" href="{{route('pc')}}">PC TIPS</a></div>
             </div>
+              <div class="pt-4"><a class="btn btn-sm btn-outline-primary me-3" href="{{route('pc')}}">PC TIPS</a></div>
           </div>
         </div>
       </section>
