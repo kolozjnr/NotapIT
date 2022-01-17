@@ -68,7 +68,7 @@ class UnivController extends Controller
                             'api_token'=> '2BVWH5wjn3c9ABqSIvRB7gCQen2GjHrhvIXpySn2K6XxbN2NpMdk2f8Y9XVa',
                             'to'=> $IT_attndnt_tel,
                             'from'=> 'NOTAP IT',
-                            'body'=> 'Please' ." " . $name . 'kindly check'." " .$dept. 'for a Troubleshoot',
+                            'body'=> 'Please' ." " . $name . " ". 'kindly check'. " " .$dept. " " .'for a Troubleshoot',
                             'gateway'=> '0',
                             'append_sender'=> '0',
                         ],
