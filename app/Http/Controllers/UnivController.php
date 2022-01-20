@@ -39,6 +39,7 @@ class UnivController extends Controller
         return view('main.add-problem');
     }
 
+
     //Request Help Logic
     public function requestHelp(Request $req){
         $users = DB::table('users')

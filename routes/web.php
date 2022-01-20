@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\UnivController;
+use App\Http\Controllers\ITUnitController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,3 +31,9 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 Route::get('/add', [UnivController::class,('addProb')])->name('AddProblem');
 Route::post('/dashboard',[UnivController::class,('requestHelp')])->name('reqHelp');
 Route::get('/welcome',[UnivController::class,('fault')])->name('Fault');
+
+Route::group(['middleware' => ['auth']], function(){
+    //Manage
+    Route::resource('manage', ITUnitController::class);
+    //Route::get('market/product-description', MarketsPlaceController::class, ('getDescription'))->name('descr');
+});
