@@ -16,7 +16,7 @@
                 <!--option selected disabled class="select">Select Fault like</option--->
                 <option class="select" value="Network Issues">Network Related Issues</option>
                 <option class="select" value="Printer Issues">Printer Related Issues</option>
-                <option class="select" value="Other">Other</option>
+                <option class="select" value="IT Related">Other</option>
                 </select>
             </div>
             <div class="col-12">

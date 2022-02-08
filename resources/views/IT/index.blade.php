@@ -5,7 +5,7 @@
         </h2>
     </x-slot>
 
-    <section class="MarketPlace">
+    <section class="ManageUsers">
         <div class="container">
             <div class="row">
                 <div class="col-md-8">

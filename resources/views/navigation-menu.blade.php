@@ -105,9 +105,15 @@
                                     {{ __('API Tokens') }}
                                 </x-jet-dropdown-link>
                             @endif
+                            @if (Auth::user()->hasRole('administrator'))
+                            <x-jet-dropdown-link href="{{route('manage.index')}}">
+                                {{ __('Manage') }}
+                            </x-jet-dropdown-link>
 
-                            <div class="border-t border-gray-100"></div>
-
+                            <x-jet-dropdown-link href="{{ route('register') }}" :active="request()->routeIs('manage.index')">
+                                {{ __('Register') }}
+                            </x-jet-dropdown-link>
+                            @endif
                             <!-- Authentication -->
                             <form method="POST" action="{{ route('logout') }}">
                                 @csrf
@@ -170,6 +176,18 @@
                     </x-jet-responsive-nav-link>
                 @endif
 
+                @if (Auth::user()->hasRole('administrator'))
+                <x-jet-responsive-nav-link href="{{ route('manage.index') }}" :active="request()->routeIs('manage.index')">
+                    {{ __('Manage') }}
+                </x-jet-responsive-nav-link>
+
+                <x-jet-responsive-nav-link href="{{ route('register') }}" :active="request()->routeIs('manage.index')">
+                    {{ __('Register') }}
+                </x-jet-responsive-nav-link>
+                
+                @endif
+
+                <!--li class="nav-item px-2 fas fa-login" ><a href="{{route('login')}}" class="nav-link fw-bold">LOGIN</a></li---->
                 <!-- Authentication -->
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf

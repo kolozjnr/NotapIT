@@ -17,7 +17,19 @@ use App\Models\RequestLog;
 class UnivController extends Controller
 {
     //Universal Functions
-
+   /* public function dashboard(){
+        if(Auth::user()->hasRole('user')){
+            
+            return view('manage.index');
+        }
+        elseif(Auth::user()->hasRole('IT')){
+            return view('manage.index');
+        }
+        elseif(Auth::user()->hasRole('administrator')){
+            return view('manage.index');
+        }
+    }**/
+    
     public function fault(){
         $faults = DB::table('fault_catrs')->get();
         return view('dashboard',['faults' => $faults]);

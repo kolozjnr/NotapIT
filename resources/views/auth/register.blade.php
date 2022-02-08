@@ -42,6 +42,15 @@
                     <option value="SERVICOM" class="select">SERVICOM</option>
             </select>
             </div>
+            <div class="mt-4">
+                <x-jet-label for="user_type" value="{{ __('User Type') }}" />
+                <select id="user_type" class="block mt-1 w-full form-control" type="user_type" name="role_id" :value="old('user_type')" required>
+                    <option value="" selected disabled>User Type</option>
+                    <option value="user" class="select">User</option>
+                    <option value="administrator" class="select">Admin</option>
+                    <option value="IT" class="select">IT</option>
+            </select>
+            </div>
 
             <div class="mt-4">
                 <x-jet-label for="password" value="{{ __('Password') }}" />
@@ -75,9 +84,9 @@
                     {{ __('Already registered?') }}
                 </a>
 
-                <x-jet-button class="ml-4">
-                    {{ __('Register') }}
-                </x-jet-button>
+                <div class="ml-4">
+                <button type="submit" class="btn btn-primary"> {{ __('Register') }}</button>
+                </div>
             </div>
         </form>
     </x-jet-authentication-card>
