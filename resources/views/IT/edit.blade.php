@@ -1,10 +1,10 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Manage Users') }}
+            {{ __('Edit Users') }}
         </h2>
     </x-slot>
-    <section class="MarketPlace">
+    <section class="Manageusers">
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
@@ -13,7 +13,7 @@
                         @csrf
                         @method('PUT')
                         <div class="input-group mt-5 mb-3">
-                            <span class="input-group-text" id="basic-addon1">Name</span>
+                            <span class="input-group-text font-semibold text-xl text-black leading-tight" id="basic-addon1">Name</span>
                             <input type="text" class="form-control" value="{{$user->name}}" name="name" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
                             </div>
 
@@ -29,7 +29,11 @@
 
                             <div class="input-group mb-3">
                             <span class="input-group-text">Status</span>
-                            <input type="text" class="form-control" name="status" value="{{$user->status}}" aria-label="Status">
+                            <select class="form-control" name="status" value="{{$user->status}}" >
+                                <option value="INACTIVE">INACTIVE</option>
+                                <option value="Active">Active</option>
+                            </select>
+                            
                             </div>
 
                             <div class="col-6">

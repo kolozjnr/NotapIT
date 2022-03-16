@@ -21,12 +21,12 @@
         <!-- Scripts -->
         <script src="{{ mix('js/app.js') }}" defer></script>
         <!-- ===============================================-->
-        <link href="assets/css/theme.css" rel="stylesheet" />
+        <link href="{{ asset('assets/css/theme.css') }}" rel="stylesheet" />
     </head>
     <body class="font-sans antialiased">
         <x-jet-banner />
 
-        <div class="min-h-screen bg-gray-100">
+        <div class="min-h-screen bg-gray-100" >
             @livewire('navigation-menu')
             
             @include('message.flash-message')
@@ -64,7 +64,7 @@
         <script>
         feather.replace();
         </script>
-        <script src="assets/js/theme.js"></script>
+        <script src="{{asset('assets/js/theme.js')}}"></script>
 
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;700&amp;display=swap" rel="stylesheet">
     </body>

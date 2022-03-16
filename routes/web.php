@@ -44,6 +44,9 @@ Route::group(['middleware' => ['auth', 'role:administrator']], function(){
     Route::get('/register', [RegisteredUserController::class, 'create'])
                 ->middleware(['auth:'.config('fortify.guard')])
                 ->name('register');
+                Route::post('/register', [RegisteredUserController::class, 'store'])
+                ->middleware(['auth:'.config('fortify.guard')]);
+    
     Route::resource('manage', ITUnitController::class);
     Route::get('/add', [UnivController::class,('addProb')])->name('AddProblem');
     });

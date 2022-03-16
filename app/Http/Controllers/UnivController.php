@@ -56,7 +56,7 @@ class UnivController extends Controller
     public function requestHelp(Request $req){
         $users = DB::table('users')
         ->where([
-            ["status", "=", "Active"],
+            ["status", "=", "INActive"],
             ["dept", "=", "IT"],
         ])->get();
         if($users->isEmpty()){
@@ -116,7 +116,7 @@ class UnivController extends Controller
         }
         foreach($users as $user){
             //SEND SMS NOTIFICATION TO IT Department
-            dd($users);
+            /*dd($users);
 
             $client = new \GuzzleHttp\Client();
             $email = $user->email;
@@ -139,11 +139,10 @@ class UnivController extends Controller
                 ]
             );
             $body = $response->getBody();
-            print_r(json_decode((string) $body));
+            print_r(json_decode((string) $body));*/
             $id = $user->id;
-            $update = User::find($id);
-            $update->status = "Busy";
-
+            $update = User::find($id)->update(['status' => 'Active']);
+            dd($users);
             $updatepost = new PostRequest;
             DB::table('request_logs')->where([
                 ['dept', '=', $req->dept]
